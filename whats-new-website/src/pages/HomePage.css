@@ -1,5 +1,6 @@
 .home-page {
   text-align: center;
+  position: relative;
 }
 
 /* Banner Container for Full-Width Image */
@@ -23,20 +24,40 @@
 /* Banner Text Overlay */
 .banner-text {
   position: absolute;
-  top: 50%;
+  top: 50;
   left: 50%;
   transform: translate(
-    -50%,
-    -50%
+    -90%,
+    122%
   ); /* Center the text horizontally and vertically */
   color: white;
+  display: flex;
   text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text more readable over image */
   z-index: 10; /* Ensure text appears above image */
 }
 
-.button-container {
-  margin-top: 2rem;
+.dynamic-text-container {
+  position: absolute; /* Allows complete manual control of positioning */
+  top: 28%;
+  left: 100%;
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.dynamic-text {
+  font-weight: bold; /* emphasize text change */
+  transition: all 0.5s ease-in-out; /* Smooth transition for font changes */
+}
+
+.banner-text h2 {
+  font-size: 3rem;
+  font-family: "Georgia, serif";
+  margin-right: 1rem;
+}
+
+.event-button-container {
+  margin-top: 3rem;
 }
 
 .events-button {
@@ -48,8 +69,10 @@
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
-  z-index: 11;
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem;
+  z-index: 15;
 }
 
 .events-button:hover {

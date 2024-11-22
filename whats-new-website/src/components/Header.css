@@ -1,6 +1,11 @@
 .header {
   height: 80%;
-  background-color: #ffff21;
+  background: linear-gradient(
+    to top,
+    #ffffff,
+    #f0f0f0
+  ); /* Creates a left-to-gray gradient */
+  color: white;
   padding: 1rem;
 }
 
