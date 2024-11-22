@@ -1,0 +1,52 @@
+/* Banner Container for Full-Width Image */
+.banner-container {
+  position: relative; /* Allows me to position text over image */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Prevents content for overflowing */
+}
+
+/* Full-Width Image */
+.homepage-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Banner Text Overlay */
+.banner-text {
+  position: absolute;
+  top: 50;
+  left: 50%;
+  transform: translate(
+    -90%,
+    122%
+  ); /* Center the text horizontally and vertically */
+  color: white;
+  display: flex;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Make text more readable over image */
+  z-index: 10; /* Ensure text appears above image */
+}
+
+.dynamic-text-container {
+  position: absolute; /* Allows complete manual control of positioning */
+  top: 28%;
+  left: 100%;
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.dynamic-text {
+  font-weight: bold; /* emphasize text change */
+  transition: all 0.5s ease-in-out; /* Smooth transition for font changes */
+}
+
+.banner-text h2 {
+  font-size: 3rem;
+  font-family: "Georgia, serif";
+  margin-right: 1rem;
+}
