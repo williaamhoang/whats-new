@@ -1,0 +1,117 @@
+@import '../../styles/variables.css';
+
+.navbar {
+    background-color: var(--background-light);
+    position: skicky; /* Keeps NavBar fixed to the top */
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar-containter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 3.5rem;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allow left section to grow if needed */
+    min-width: 0; /* Prevent overflowing and force content to shrink if needed */
+}
+
+.logo {
+    flex-shrink: 0; /* Takes up availble space to push nav-links and nav-actions apart */
+    margin-right: 2rem; /* Add margin between logo and links */
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-shrink: 1; /* Allow navigation links to shrink if there's not enough space */
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent text from wrapping to multiple lines */
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem; /* Space between Login and Sign Up button */
+    align-items: center; /* Vertically center all buttons */
+    flex-shrink: 0; 
+    margin-left: auto; /* Add margin to keep the button from touching the right edge */
+}
+
+/* Reuseable Button Classes */
+.button {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: backgrund-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 1rem;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.button-secondary {
+    background-color: transparent; 
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.button--secondary:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .navbar-containter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-actions {
+        margin-top: 1rem;
+        justify-content: flex-start; /* Align buttons to start for mobile */
+    }
+}
