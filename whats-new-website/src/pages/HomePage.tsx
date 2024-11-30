@@ -8,7 +8,6 @@ const HomePage: React.FC = () => {
     return (
         <div className="home-page">
             <Banner />
-            <NavBar />
             <EventsButton />
         </div>
     );

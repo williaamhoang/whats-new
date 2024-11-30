@@ -15,7 +15,6 @@ function App() {
     <Router>
       <ScrollToTop /> 
       <div className="App">
-      <NavBar />
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
